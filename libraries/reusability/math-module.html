@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+    html, body {
+      width: 800px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  </style>
+  <script type="text/javascript">
+    function doMath() {
+      var operator = document.getElementById('operator').value;
+      var firstNumber = Number(document.getElementById('number1').value);
+      var secondNumber = Number(document.getElementById('number2').value);
+      var outputElement = document.getElementById('value');
+
+      if (operator == 'plus') {
+        outputElement.value = firstNumber + secondNumber;
+      } else if (operator == 'minus') {
+        outputElement.value = firstNumber - secondNumber;
+      } else if (operator == 'multiply') {
+        outputElement.value = firstNumber * secondNumber;
+      } else if (operator == 'divide') {
+        outputElement.value = firstNumber / secondNumber;
+      }
+    }
+  </script>
+</head>
+<body>
+
+<h1>Simple Match Calculator</h1>
+<input id="number1" type="number"/>
+<select name="" id="operator">
+  <option value="plus">+</option>
+  <option value="minus">-</option>
+  <option value="multiply">*</option>
+  <option value="divide">/</option>
+</select>
+<input id="number2" type="number"/>
+<button onclick="doMath()">=</button>
+<input id="value" type="number"/>
+
+</body>
+</html>

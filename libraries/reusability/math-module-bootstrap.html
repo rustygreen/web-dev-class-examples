@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <script type="text/javascript">
+    function doMath() {
+      var operator = document.getElementById('operator').value;
+      var firstNumber = Number(document.getElementById('number1').value);
+      var secondNumber = Number(document.getElementById('number2').value);
+      var outputElement = document.getElementById('value');
+
+      if (operator == 'plus') {
+        outputElement.value = firstNumber + secondNumber;
+      } else if (operator == 'minus') {
+        outputElement.value = firstNumber - secondNumber;
+      } else if (operator == 'multiply') {
+        outputElement.value = firstNumber * secondNumber;
+      } else if (operator == 'divide') {
+        outputElement.value = firstNumber / secondNumber;
+      }
+    }
+  </script>
+</head>
+<body class="container">
+
+<h1>Simple Match Calculator</h1>
+
+<form class="form-inline">
+  <div class="form-group">
+    <input id="number1" class="form-control" type="number"/>
+  </div>
+
+  <div class="form-group">
+    <select name="" id="operator" class="form-control">
+      <option value="plus">+</option>
+      <option value="minus">-</option>
+      <option value="multiply">*</option>
+      <option value="divide">/</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <input id="number2" class="form-control" type="number"/>
+  </div>
+
+  <div class="form-group">
+    <button type="button" onclick="doMath()" class="btn btn-primary">=</button>
+  </div>
+
+  <div class="form-group">
+    <input id="value" type="number" class="form-control"/>
+  </div>
+
+</form>
+
+</body>
+</html>

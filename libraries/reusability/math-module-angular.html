@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular Example</title>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.1/angular.min.js"></script>
+  <script>
+    'use strict';
+    angular.module('mathApp', []);
+  </script>
+
+</head>
+<body ng-app="mathApp" ng-init="operator='plus'">
+<div>
+
+  <h1>Simple Match Calculator</h1>
+  <input type="number" ng-model="num1"/>
+  <select ng-model="operator">
+    <option selected="selected" value="plus">+</option>
+    <option value="minus">-</option>
+    <option value="multiply">*</option>
+    <option value="divide">/</option>
+  </select>
+  <input type="number" ng-model="num2"/>
+  =
+  <input ng-if="operator=='plus'" type="number" value="{{num1+num2}}"/>
+
+</div>
+</body>
+</html>

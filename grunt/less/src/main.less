@@ -1,0 +1,24 @@
+@primary-color: orange;
+@color: black;
+@bg-color: white;
+@header-bg-color: lighten(@color, 35%);
+@header-color: darken(@color, 35%);
+@footer-bg-color: spin(@color, 180);
+@footer-color: spin(@color, 90);
+
+@import "header.less";
+@import "footer.less";
+@import "about.less";
+
+.super-padding {
+  padding: 50px;
+}
+
+body {
+  color: @color;
+  background-color: @bg-color;
+}
+
+#jumbotron {
+  .super-padding();
+}
