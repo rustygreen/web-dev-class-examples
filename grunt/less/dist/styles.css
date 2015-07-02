@@ -13,6 +13,8 @@ h1 {
 }
 .super-padding {
   padding: 50px;
+  color: blue;
+  font-weight: bold;
 }
 body {
   color: #000000;
@@ -20,4 +22,7 @@ body {
 }
 #jumbotron {
   padding: 50px;
+  color: blue;
+  font-weight: bold;
+  font-size: 12px;
 }

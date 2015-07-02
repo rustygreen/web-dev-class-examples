@@ -8,12 +8,13 @@
       margin-left: auto;
     }
   </style>
+  <script src="shortcut.js"></script>
   <script type="text/javascript">
     function doMath() {
-      var operator = document.getElementById('operator').value;
-      var firstNumber = Number(document.getElementById('number1').value);
-      var secondNumber = Number(document.getElementById('number2').value);
-      var outputElement = document.getElementById('value');
+      var operator = mylib.value('operator');
+      var firstNumber = mylib.num('number1');
+      var secondNumber = mylib.num('number2');
+      var outputElement = mylib.byId('value');
 
       if (operator == 'plus') {
         outputElement.value = firstNumber + secondNumber;

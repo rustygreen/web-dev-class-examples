@@ -1,3 +1,4 @@
+// Variables.
 @primary-color: orange;
 @color: black;
 @bg-color: white;
@@ -6,12 +7,15 @@
 @footer-bg-color: spin(@color, 180);
 @footer-color: spin(@color, 90);
 
+// Imports.
 @import "header.less";
 @import "footer.less";
 @import "about.less";
 
 .super-padding {
   padding: 50px;
+  color: blue;
+  font-weight: bold;
 }
 
 body {
@@ -21,4 +25,5 @@ body {
 
 #jumbotron {
   .super-padding();
+  font-size: 12px;
 }
