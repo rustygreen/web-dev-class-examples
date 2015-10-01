@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<button onclick="util1.sayMyName()">
+  Say My Name
+</button>
+<div id="output"></div>
+<script>
+  var firstName = 'Rusty';
+  var lastName = 'Green';
+  var util1 = {};
+
+  function sayMyName() {
+    var myName = firstName + ' ' + lastName;
+    console.log(myName);
+    document.getElementById('output').innerHTML = myName;
+  }
+
+  util1.sayMyName = sayMyName;
+</script>
+
+</body>
+</html>

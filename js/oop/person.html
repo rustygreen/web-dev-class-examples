@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input id="firstName" type="text"/>
+<input id="lastName" type="text"/>
+
+<button onclick="sayHi();">
+  Say Hi
+</button>
+
+<div id="output"></div>
+
+<script src="Person.js"></script>
+<script>
+  function sayHi() {
+    var firstName = document.getElementById('firstName').value;
+    var lastName = document.getElementById('lastName').value;
+    var person = new Person(firstName, lastName);
+
+    person.sayHello();
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+<h1>
+    Woo Hoo!
+    <small>You made an AJAX request!</small>
+</h1>
+
+<p>AJAX is not a new programming language.</p>
+<p>AJAX is a technique for creating fast and dynamic web pages.</p>
