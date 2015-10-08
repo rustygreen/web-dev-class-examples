@@ -1,7 +1,32 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function Person(firstName, lastName){
   this.firstName = firstName;
   this.lastName = lastName;
 }
+
+Person.speakStatic = function () {
+};
 
 Person.prototype.speak = function (message) {
   alert(message);
@@ -12,6 +37,20 @@ Person.prototype.sayHello = function () {
 };
 
 
+function Student(firstName, lastName, studentId){
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.studentId = studentId;
+}
+
+Student.prototype = new Person();
+
+Student.prototype.signIntoClass = function () {
+};
+
+
+var student = new Student('rusty', 'green', 12342);
+student.sayHello();
 
 
 

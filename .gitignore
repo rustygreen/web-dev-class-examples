@@ -2,3 +2,4 @@
 node_modules
 bower_components
 mongo/data
+grunt/uglify/dist/output.min.js

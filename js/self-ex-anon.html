@@ -5,18 +5,25 @@
   Say My Name
 </button>
 <div id="output"></div>
+<script src="www.remote-server.com"></script>
+
 <script>
-  var firstName = 'Rusty';
-  var lastName = 'Green';
-  var util1 = {};
+  (function () {
+    var firstName = 'Rusty';
+    var lastName = 'Green';
+    util1 = {};
 
-  function sayMyName() {
-    var myName = firstName + ' ' + lastName;
-    console.log(myName);
-    document.getElementById('output').innerHTML = myName;
-  }
+    // cannot access x.
 
-  util1.sayMyName = sayMyName;
+    function sayMyName() {
+      var myName = firstName + ' ' + lastName;
+      var x = 0;
+      console.log(myName);
+      document.getElementById('output').innerHTML = myName;
+    }
+
+    util1.sayMyName = sayMyName;
+  })();
 </script>
 
 </body>

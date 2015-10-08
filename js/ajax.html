@@ -10,7 +10,6 @@
 <button type="button" onclick="loadDoc('ajax_info.txt')">
   Load From Same Domain (Using XHR)
 </button>
-
 <button type="button"
         onclick="loadDocJsonP('http://stg-app.tsstools.com/arcpub/rest/services/public/geo_report/MapServer?f=pjson&callback=callback')">
   Load Across Domain (Using JSONP)
@@ -23,8 +22,8 @@
 
     xhttp.onreadystatechange = function () {
       if (xhttp.readyState == 4) {
-
         if (xhttp.status == 200) {
+          debugger;
           document.getElementById("demo").innerHTML = xhttp.responseText;
         } else {
           alert('Sorry, server responded with a ' + xhttp.status + ' status. Can\'t make cross domain requests :(')
@@ -49,18 +48,18 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
 <!--This is what ajax does:-->
-<!--<script>-->
-  <!--window.myJsonPCallback = function (response) {-->
-    <!--debugger;-->
-    <!--// Do what you want with this response...-->
-    <!--// Cleanup the callback.-->
-    <!--delete window.myJsonPCallback;-->
-  <!--}-->
-<!--</script>-->
+<script>
+  window.myJsonPCallback = function (response) {
+    debugger;
+    // Do what you want with this response...
+    // Cleanup the callback.
+    delete window.myJsonPCallback;
+  }
+</script>
 
-<!--<script type="application/javascript"-->
-        <!--src="http://stg-app.tsstools.com/arcpub/rest/services/public/geo_report/MapServer?f=pjson&callback=myJsonPCallback">-->
-<!--</script>-->
+<script type="application/javascript"
+        src="http://stg-app.tsstools.com/arcpub/rest/services/public/geo_report/MapServer?f=pjson&callback=myJsonPCallback">
+</script>
 
 </body>
 </html>
