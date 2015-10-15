@@ -1,32 +1,7 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function Person(firstName, lastName){
   this.firstName = firstName;
   this.lastName = lastName;
 }
-
-Person.speakStatic = function () {
-};
 
 Person.prototype.speak = function (message) {
   alert(message);

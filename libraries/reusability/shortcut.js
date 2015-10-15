@@ -4,10 +4,10 @@ window.mylib = {
   },
 
   value: function (id) {
-    return byId(id).value;
+    return this.byId(id).value;
   },
 
   num: function (id) {
-    return Number(byId(id).value);
+    return Number(this.byId(id).value);
   }
 };
