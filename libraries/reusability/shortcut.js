@@ -1,13 +1,13 @@
-window.mylib = {
-  byId: function (id) {
-    return document.getElementById(id);
+mylib = {
+  byId: function (elementId){
+    return document.getElementById(elementId);
   },
 
-  value: function (id) {
-    return this.byId(id).value;
+  value: function (elementId){
+    return this.byId(elementId).value;
   },
 
-  num: function (id) {
-    return Number(this.byId(id).value);
+  num: function num(elementId){
+    return Number(this.value(elementId));
   }
 };
