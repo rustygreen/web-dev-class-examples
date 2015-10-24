@@ -1,5 +1,6 @@
 set datadir=%~dp0data
 echo %datadir%
+
 ::cd C:\Program Files\MongoDB 2.6 Standard\bin
 mongod --dbpath %datadir%
 
@@ -28,6 +29,9 @@ mongod --dbpath %datadir%
 
 :: Show DBs
 ::show dbs
+
+:: Check currently selected db
+::db
 
 :: Exit.
 ::quit()
