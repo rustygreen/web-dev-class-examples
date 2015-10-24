@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular-resource.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+
+<body ng-app="app" class="container">
+
+<div class="page-header">
+  <h1>
+    <i class="glyphicon glyphicon-th-list"></i> Contact List
+    <small>of random people</small>
+  </h1>
+</div>
+
+<div class="jumbotron" ng-controller="PeopleController as people">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="list-group">
+        <span class="list-group-item" ng-repeat="person in people.list">
+          <button class="btn btn-danger btn-sm" ng-click="people.delete($index)">
+            <i class="glyphicon glyphicon-trash"></i> Delete
+          </button>
+          <i class="glyphicon glyphicon-user"></i> {{person.name}}
+          <span class="label label-primary pull-right">{{person.position}}</span>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+<script>
+  angular.module('app', ['ngResource'])
+      .factory('Person', function ($resource) {
+        return $resource('assets/people.json');
+      })
+
+      .controller('PeopleController', function (Person) {
+        this.list = Person.query();
+
+        this.delete = function (index) {
+          this.list.splice(index, 1);
+        };
+      });
+</script>
+</html>
