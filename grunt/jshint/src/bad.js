@@ -5,9 +5,9 @@ function Person(firstName, lastName) {
   this.lastName = lastName;
 }
 
-Person.prototype.speak = function (message) {
-  window.alert(message);
+Person.prototype.Speak = function () {
 };
+
 
 Person.prototype.sayHello = function () {
   this.speak('Hello, my name is ' + this.firstName + ' ' + this.lastName);

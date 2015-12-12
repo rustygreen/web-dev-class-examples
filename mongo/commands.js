@@ -3,31 +3,22 @@
 // https://docs.mongodb.org/manual/reference/mongo-shell/
 
 // Insert some data.
-mongoimport--
-db
-simple--
-collection
-people--
-jsonArray
-people.json
+mongoimport --db simple --collection people --jsonArray people.json
 
 // Connect to mongo.
 mongo
 
 // Show DBs
-show
-dbs
+show dbs
 
 // Connect to db.
-use
-simple
+use simple
 
 // Check currently selected db
 db
 
 // Show all collections
-show
-collections
+show collections
 
 // Get count.
 db.people.count()
@@ -79,28 +70,19 @@ quit()
 db.dropDatabase()
 
 // Show DBs
-show
-dbs
+show dbs
 
 // Insert data again.
-mongoimport--
-db
-simple--
-collection
-people--
-jsonArray
-people.json
+mongoimport --db simple --collection people --jsonArray people.json
 
 // Connect to mongo.
 mongo
 
 // Show DBs
-show
-dbs
+show dbs
 
 // Connect to db.
-use
-simple
+use simple
 
 
 //load("scripts/myjstest.js")

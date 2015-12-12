@@ -5,6 +5,10 @@ app.get('/', function (req, res) {
   res.send('Hello World!');
 });
 
+app.get('/people', function (req, res) {
+  res.send('heres some peo');
+});
+
 var server = app.listen(3000, function () {
 
   var host = server.address().address;

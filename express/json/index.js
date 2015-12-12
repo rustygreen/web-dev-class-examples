@@ -1,5 +1,5 @@
 var tasks = [
-  {text: 'learn angular too', done: true},
+  {text: 'XXXXXXXXXlearn angular too', done: true},
   {text: 'build an angular app', done: false},
   {text: 'learn express routing', done: false},
   {text: 'learn mongo db', done: false}

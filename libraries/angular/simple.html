@@ -6,7 +6,7 @@
 <body>
 <div>
   <label>Name:</label>
-  <input type="text" ng-model="yourName" placeholder="Enter a name here">
+  <input type="text" ng-model="myLat" placeholder="Enter a name here">
   <hr>
   <h1>
     Hello {{yourName}}!
@@ -14,5 +14,10 @@
 
   Your Name is {{yourName.length}} characters long
 </div>
+
+<script>
+  var module2 = angular.module('app', []);
+</script>
+<script src="PersonCtrl.js"/>
 </body>
 </html>

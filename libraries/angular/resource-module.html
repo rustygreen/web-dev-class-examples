@@ -36,11 +36,14 @@
 <script>
   angular.module('app', ['ngResource'])
       .factory('Person', function ($resource) {
-        return $resource('assets/people.json');
+        return $resource('http://api/people/123');
       })
 
       .controller('PeopleController', function (Person) {
-        this.list = Person.query();
+        this.list = Person.query({orderBy: 'name'});
+
+        this.person = Person.get({id: 123});
+        this.person.$delete();
 
         this.delete = function (index) {
           this.list.splice(index, 1);
